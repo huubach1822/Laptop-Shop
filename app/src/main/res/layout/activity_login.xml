@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bk"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/loginHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome\nBack"
+            android:textSize="35sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputUsername"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+
+            <EditText
+                android:id="@+id/LoginUsername"
+                style="@style/modifiedEditText"
+                android:layout_height="48dp"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+
+            <EditText
+                android:id="@+id/LoginPassword"
+                style="@style/modifiedEditText"
+                android:layout_height="48dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLogOut"
+            style="@style/loginButton"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="Login" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvSignUp"-->
+<!--            style="@style/parent"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:gravity="end"-->
+<!--            android:text="@string/login_signup_hint"-->
+<!--            android:textAlignment="textEnd"-->
+<!--            android:textColor="@color/primaryTextColor"-->
+<!--            android:textStyle="bold" />-->
+
+
+    </LinearLayout>
+
+</RelativeLayout>

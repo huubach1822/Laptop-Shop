@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homemenu"
+        android:title="Home"
+        android:icon="@drawable/round_home_24">
+    </item>
+    <item android:id="@+id/productmenu"
+        android:title="Product"
+        android:icon="@drawable/round_laptop_windows_24">
+    </item>
+    <item android:title=""
+        />
+    <item android:id="@+id/paymentmenu"
+        android:title="Economic"
+        android:icon="@drawable/baseline_bar_chart_24">
+    </item>
+    <item android:id="@+id/accoutnmenu"
+        android:title="Account"
+        android:icon="@drawable/round_account_circle_24">
+    </item>
+</menu>

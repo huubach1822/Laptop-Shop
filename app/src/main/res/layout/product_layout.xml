@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/imgProduct"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/titleProduct"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Ten Laptop"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgProduct"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Slg: 100"
+        app:layout_constraintEnd_toStartOf="@+id/btnXoa"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/supplierProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Lenovo"
+        app:layout_constraintStart_toEndOf="@+id/imgProduct"
+        app:layout_constraintTop_toBottomOf="@+id/titleProduct" />
+
+    <TextView
+        android:id="@+id/priceProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="Gia: 150000000"
+        app:layout_constraintEnd_toStartOf="@+id/btnXoa"
+        app:layout_constraintTop_toBottomOf="@+id/numProduct" />
+
+    <TextView
+        android:id="@+id/desProduct"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text=" aaaaaaa \n aaaaaaaa \n aaaa"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/imgProduct"
+        app:layout_constraintTop_toBottomOf="@+id/supplierProduct" />
+
+    <Button
+        android:id="@+id/btnXoa"
+        style="@style/loginButton"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/button_blue"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCapNhap"
+        style="@style/loginButton"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/button_blue"
+        android:text="Detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnXoa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

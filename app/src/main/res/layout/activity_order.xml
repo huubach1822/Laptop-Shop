@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/pl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#4958dc"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolBarStyle"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_background"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pl_toolbar"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sv_Order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            app:iconifiedByDefault="false"
+            android:hint="@string/search"
+            android:queryHint="Search" />
+
+    </androidx.cardview.widget.CardView>
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:id="@+id/radioGroup"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <RadioButton
+            android:id="@+id/radio_a"
+            android:layout_marginLeft="20dp"
+            android:layout_width="175dp"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Wating" />
+
+        <RadioButton
+            android:id="@+id/radio_b"
+            android:layout_width="175dp"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Completed" />
+
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/lv_Order"
+                android:layout_width="409dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabCradleMargin="10dp"
+            android:background="@drawable/button_background"
+            app:fabCradleRoundedCornerRadius="10dp"
+            app:fabCradleVerticalOffset="10dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_height="match_parent"
+                app:itemIconTint="@color/bottom_nav_icon_color_selector"
+                app:itemTextColor="@color/bottom_nav_icon_color_selector"
+                app:labelVisibilityMode="labeled"
+                android:background="@android:color/transparent"
+                app:menu="@menu/menu_bottom_nav" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_shopping_cart_24"
+            android:contentDescription="@string/app_name"
+            app:layout_anchor="@id/bottomAppBar" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
